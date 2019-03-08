@@ -1,0 +1,304 @@
+{
+  "state":"200",
+  "msg":"操作成功",
+  "type": "data",
+  "dataType": "Object",
+  "data": {
+    "metas": {
+      "taskAddDefaultData": {
+        "id": null,
+        "status": null,
+        "title": "",
+        "projectName": "",
+        "modules": null,
+        "charger": "",
+        "provider": "",
+        "createDate": null,
+        "usedWorkload": null,
+        "syncTime": null,
+        "content": "",
+        "planWorkload": null,
+        "type": "",
+        "priorityLevel": "",
+        "requireDate": null,
+        "fileId": "{\"name\":\"xx.doc\",\"id\":\"11\",\"extName\":\"doc\"},{\"name\":\"yy.doc\",\"id\":\"22\",\"extName\":\"xlsx\"}"
+      },
+      "taskAddFormMetaData": [
+      {
+        "name":"title",
+        "width":460,
+        "type":"text",
+        "placeholder":"任务标题",
+        "maxlength":100,
+        "clearable":true,
+        "disabled":false,
+        "size":"mini",
+        "rows":1,
+        "autosize":false,
+        "autoComplete":"off",
+        "readonly":false,
+        "minlength":0,
+        "resize":"none",
+        "autofocus":false,
+        "col":12,
+        "newRow":true
+      },
+      {
+        "disabled": false,
+        "debounce": 300,
+        "placement": "bottom-start",
+        "placeholder": "项目名称",
+        "triggerOnFocus": false,
+        "name": "projectName",
+        "selectWhenUnmatched": false,
+        "type": "autoComplete",
+        "width": 330,
+        "size": "mini",
+        "col":12,
+        "newRow":false,
+        "uri":"api/task/project/retrieval"
+      },
+      {
+        "multiple":true,
+        "disabled":false,
+        "name":"modules",
+        "size":"mini",
+        "clearable":false,
+        "collapseTags":false,
+        "multipleLimit":0,
+        "autoComplete":"off",
+        "placeholder":"涉及模块",
+        "filterable":false,
+        "remote":false,
+        "allowCreate":false,
+        "loadingText":"加载中",
+        "defaultFirstOption":false,
+        "reserveKeyword":false,
+        "popperAppendToBody":true,
+        "type":"select",
+        "width":340,
+        "noDataText":"等等",
+        "noMatchText":"无相关数据",
+        "automaticDropdown":false,
+        "col":9,
+        "newRow":true,
+        "uri":"",
+        "options":[]
+      },
+      {
+        "type":"select",
+        "name":"type",
+        "multiple":false,
+        "width":95,
+        "disabled":false,
+        "clearable":false,
+        "size":"mini",
+        "placeholder":"类型",
+        "collapseTags":false,
+        "multipleLimit":0,
+        "autoComplete":"off",
+        "filterable":false,
+        "remote":false,
+        "margin":false,
+        "col":3,
+        "newRow":false,
+        "defaultFirstOption":false,
+        "reserveKeyword":false,
+        "popperAppendToBody":true,
+        "noDataText":"等等",
+        "noMatchText":"无相关数据",
+        "options":[
+          {
+            "label":"需求",
+            "name":"需求"
+          },
+          {
+            "label":"bug",
+            "name":"bug"
+          }
+        ]
+      },
+      {
+        "name":"provider",
+        "width":100,
+        "type":"text",
+        "placeholder":"提供人",
+        "maxlength":10,
+        "clearable":true,
+        "disabled":false,
+        "size":"mini",
+        "rows":1,
+        "autosize":false,
+        "autoComplete":"off",
+        "readonly":false,
+        "minlength":0,
+        "col":3,
+        "newRow":false,
+        "resize":"none",
+        "autofocus":false
+      },
+      {
+        "name":"requireDate",
+        "type":"date",
+        "width":210,
+        "readonly":false,
+        "size":"mini",
+        "disabled":false,
+        "editable":true,
+        "placeholder":"计划完成时间",
+        "startPlaceholder":"",
+        "endPlaceholder":"",
+        "rangeSeparator":"",
+        "col":8,
+        "newRow":false,
+        "clearable":true,
+        "unlinkPanels":false,
+        "prefixIcon":"el-icon-ion-ios-calendar-outline",
+        "clearIcon":"el-icon-circle-close"
+      },
+      {
+        "disabled": false,
+        "debounce": 300,
+        "placement": "bottom-start",
+        "placeholder": "负责人",
+        "triggerOnFocus": false,
+        "name": "charger",
+        "selectWhenUnmatched": false,
+        "type": "autoComplete",
+        "width": 195,
+        "size": "mini",
+        "col":5,
+        "newRow":true,
+        "uri":"api/task/employee/retrieval"
+      },
+      {
+        "multiple":false,
+        "disabled":false,
+        "type":"select",
+        "name":"priorityLevel",
+        "size":"mini",
+        "clearable":false,
+        "collapseTags":false,
+        "autoComplete":"off",
+        "width":155,
+        "multipleLimit":0,
+        "placeholder":"优先级",
+        "filterable":false,
+        "remote":false,
+        "allowCreate":false,
+        "loadingText":"加载中",
+        "defaultFirstOption":false,
+        "reserveKeyword":false,
+        "popperAppendToBody":true,
+        "noDataText":"等等",
+        "noMatchText":"无相关数据",
+        "automaticDropdown":false,
+        "uri":"",
+        "col":5,
+        "newRow":false,
+        "options":[
+          {
+            "label":"当前完成",
+            "name":"当前完成",
+            "disabled":false
+          },
+          {
+            "label":"2天内完成",
+            "name":"2天内完成",
+            "disabled":false
+          },
+          {
+            "label":"5天内完成",
+            "name":"5天内完成",
+            "disabled":false
+          },
+          {
+            "label":"10天内完成",
+            "name":"10天内完成",
+            "disabled":false
+          },
+          {
+            "label":"20天内完成",
+            "name":"20天内完成",
+            "disabled":false
+          }
+        ]
+      },
+      {
+        "name":"planWorkload",
+        "type":"text",
+        "placeholder":"工作量",
+        "maxlength":3,
+        "width":95,
+        "clearable":false,
+        "disabled":false,
+        "size":"mini",
+        "rows":1,
+        "append":"小时",
+        "autosize":false,
+        "autoComplete":"off",
+        "readonly":false,
+        "minlength":1,
+        "resize":"none",
+        "col":5,
+        "newRow":false,
+        "autofocus":false
+      },
+      {
+        "name":"content",
+        "type":"richeditor",
+        "col": 20
+      },
+      {
+        "headers":{},
+        "type":"upload",
+        "multiple":true,
+        "delFileUri":"api/delFile/id",
+        "data":{},
+        "name":"fileId",
+        "withCredentials":false,
+        "auto-upload":true,
+        "showFileList":true,
+        "drag":false,
+        "fileList":[],
+        "listType":"picture-card",
+        "disabled":false,
+        "limit":10,
+        "minWidth":500,
+        "col":15,
+        "newRow":false
+      }
+    ]},
+    "rules":{
+      "title":[
+        {"required":true,"message":"请输入标题","trigger":"blur"},
+        {"min":1,"max":40,"message":"长度在 1 到 40 个字符","trigger":"blur"}
+      ],
+      "projectName":[
+        {"required":true,"message":"请输入具体项目","trigger":"blur,change"}
+      ],
+      "priorityLevel":[
+        {"required":true,"message":"请选择类型","trigger":"change"}
+      ],
+      "requireDate":[
+        {"required":true,"message":"请选择日期","trigger":"change"}
+      ],
+      "modules":[
+        {"required":true,"message":"请至少选择一个涉及模块","trigger":"change"}
+      ],
+      "type":[
+        {"required":true,"message":"请选择优先级","trigger":"change"}
+      ],
+      "provider":[
+        {"required":true,"message":"请输入提供人","trigger":"blur"}
+      ],
+      "charger":[
+        {"required":false,"message":"请输入负责人","trigger":"blur,change"}
+      ],
+      "planWorkload":[
+        {"required":false,"message":"请输入需要时间","trigger":"blur"},
+        {"pattern":"^[0-9]*$", "message":"只允许输入数字","trigger":"blur"}
+      ]
+    }
+  }
+}
